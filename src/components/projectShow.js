@@ -17,7 +17,7 @@ class ProjectShow extends Component {
   }
   componentDidMount(){
     console.log(this.state.bids)
-    console.log(this.state.budget)
+    console.log(this.state.id)
   }
   render() {
     return (

@@ -20,7 +20,7 @@ class NewBid extends Component {
   }
   handleSubmit = (event) => {
     event.preventDefault()
-    fetch(baseURL + '/projects' + this.state.projectId + 'bids', {
+    fetch(baseURL + '/projects/' + this.state.projectId + '/bids', {
       method: 'POST',
       body: JSON.stringify(
         {

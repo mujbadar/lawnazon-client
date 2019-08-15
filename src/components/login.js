@@ -31,9 +31,10 @@ class Login extends Component {
         headers: {
           'Content-Type': 'application/json'
         }
-    })
+    }, console.log(this.state.password))
     .then (res => res.json())
-    .then(resJson => this.props.getAccount(resJson))
+    // .then(resJson => this.props.getAccount(resJson))
+    .then(resJson => console.log(resJson))
     .catch (err => console.log('error'))
   }
 

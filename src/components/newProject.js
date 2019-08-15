@@ -4,6 +4,8 @@ import React, { Component } from 'react'
 // import Col from 'react-bootstrap/Col'
 // import Row from 'react-bootstrap/Row'
 
+const baseURL = 'http://localhost:3000'
+
 class NewProject extends Component {
   state = {
     name: '',
@@ -17,7 +19,7 @@ class NewProject extends Component {
   }
   handleSubmit = (event) => {
     event.preventDefault()
-    fetch('/accounts/' + this.props.account_id + '/projects', {
+    fetch(baseURL + '/accounts/' + this.props.account_id + '/projects', {
       method: 'POST',
       body: JSON.stringify(
         {

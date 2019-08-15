@@ -5,12 +5,14 @@ import { Link } from 'react-router-dom'
 import Card from 'react-bootstrap/Card'
 import CardGroup from 'react-bootstrap/CardGroup'
 
+const baseURL = 'http://localhost:3000'
+
 class Projects extends Component {
   state = {
     projects: []
   }
   getProjects = () => {
-    fetch('/projects', {
+    fetch(baseURL + '/projects', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'

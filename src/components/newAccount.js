@@ -30,7 +30,7 @@ class NewAccount extends Component {
   }
   handleSubmit = (event) => {
     event.preventDefault()
-    fetch('/accounts', {
+    fetch(baseURL + '/accounts', {
       method: 'POST',
       body: JSON.stringify(
         {
